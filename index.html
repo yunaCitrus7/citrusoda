@@ -93,9 +93,11 @@
       <p>&copy; 2025 Citrusoda. All rights reserved.</p>
     </footer>
 
-	<script>
+<script>
   document.addEventListener('DOMContentLoaded', () => {
     const elem = document.querySelector('.js-switch');
+    let langData = {};
+
     if (typeof Switchery === 'undefined') {
       console.error('Switchery not loaded');
       return;
@@ -103,25 +105,33 @@
 
     new Switchery(elem, { size: 'small', color: '#ffffff', secondaryColor: '#888' });
 
-    fetch('./lang.json')
+    fetch('lang.json')
       .then(res => res.json())
       .then(data => {
+        langData = data;
         const saved = localStorage.getItem('lang') || 'en';
         elem.checked = saved === 'zh';
-        applyLang(saved, data);
-      });
+        applyLang(saved);
+      })
+      .catch(err => console.error('lang.json loading failed:', err));
 
     elem.addEventListener('change', () => {
       const selected = elem.checked ? 'zh' : 'en';
       applyLang(selected);
     });
 
-    function applyLang(lang, langData) {
+    function applyLang(lang) {
+      if (!langData[lang]) {
+        console.warn(`No translations found for "${lang}"`);
+        return;
+      }
+
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const value = key.split('.').reduce((o, i) => o?.[i], langData[lang]);
         if (value) el.textContent = value;
       });
+
       localStorage.setItem('lang', lang);
     }
   });
