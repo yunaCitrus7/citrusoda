@@ -2,34 +2,136 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>index</title>
 <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="button.css">
+<!--Google Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+	
+<!--Toggle switch-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.css">
+<script src="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.js"></script>
 	
 </head>
 
 <body>
 	
 <header>
-    <h1>Title</h1>
-	
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Commissions</a></li>
-		<li><a href="#">Original Characters</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-	
-  </header>
+  <h2 style="padding:0em 1em">Citrusoda&nbsp;</h2>
 
-  
+ <nav>
+  <ul>
+    <li><a href="#" data-i18n="nav.home">Home</a></li>
+    <li><a href="#" data-i18n="nav.portfolio">Portfolio</a></li>
+    <li><a href="#" data-i18n="nav.commissions">Commissions</a></li>
+
+  <li class="dropdown">
+  <a href="#" data-i18n="nav.characters">Original Characters</a>
+  <ul class="dropdown-menu">
+    <li><a href="#" data-i18n="nav.character-intro">Character Introduction</a></li>
+    <li><a href="#" data-i18n="nav.comic">Comic</a></li>
+  </ul>
+</li>
+
+    <li><a href="#" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+	</nav>
+
+<div class="lang-switch">
+  <span class="lang-label">EN</span>
+  <input type="checkbox" id="langToggle">
+  <span class="lang-label">中文</span>
+</div>
+	
+</header>
+	
+<section id="intro">
+<div class="image-wrapper">
+  <img class="banner" src="media/placeholder.png" width="100%" height="300px" />
+  <div class="card-overlay">
+	  
+  <h1 data-i18n="intro.greeting"></h1>
+<p data-i18n="intro.selfintro"></p>
+	  
+  </div>
+</div>
+</section>
+
+<section>
+	
+<div class="homemenu">
+ <div class="homemenu-button">
+  <img src="media/placeholder.png" alt="Portfolio" />
+  <span data-i18n="nav.portfolio">Portfolio</span>
+</div>
+<div class="homemenu-button">
+  <img src="media/placeholder.png" alt="Commissions" />
+  <span data-i18n="nav.commissions">Commissions</span>
+</div>
+<div class="homemenu-button">
+  <img src="media/placeholder.png" alt="Characters" />
+  <span data-i18n="nav.characters">Original Characters</span>
+</div>
+<div class="homemenu-button">
+  <img src="media/placeholder.png" alt="Contact" />
+  <span data-i18n="nav.contact">Contact</span>
+</div>
+</div>
+
+	
+</section>
+
+	
+	
+	
 
     <footer>
       <p>&copy; 2025 Citrusoda. All rights reserved.</p>
     </footer>
-  </div>
+<script src="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let langData = {};
+    const elem = document.querySelector('#langToggle');
+
+    // Ensure Switchery is applied
+    const switchery = new Switchery(elem, {
+      color: '#ffffff',
+      secondaryColor: '#888',
+      size: 'small'
+    });
+
+    // Load lang JSON
+    fetch('lang.json')
+      .then(response => response.json())
+      .then(data => {
+        langData = data;
+        const savedLang = localStorage.getItem('lang') || 'en';
+        elem.checked = savedLang === 'zh';
+        applyLang(savedLang);
+      });
+
+    // Apply translations
+    function applyLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const value = key.split('.').reduce((obj, i) => obj?.[i], langData[lang]);
+        if (value) el.textContent = value;
+      });
+      localStorage.setItem('lang', lang);
+    }
+
+    // Switch event
+    elem.addEventListener('change', () => {
+      const selectedLang = elem.checked ? 'zh' : 'en';
+      applyLang(selectedLang);
+    });
+  });
+</script>
+
 	
 	
 </body>

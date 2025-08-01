@@ -1,0 +1,41 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "commissions": "Commissions",
+      "characters": "Original Characters",
+		"character-intro":"Character Introduction",
+		"comic":"Comics",
+      "contact": "Contact"
+    },
+    "intro": {
+      "greeting": "Hello!",
+      "selfintro": "I'm Citrusoda, welcome to my portfolio site."
+    },
+    "footer": {
+      "copyright": "© 2025 Citrusoda. All rights reserved."
+    }
+  },
+	
+	
+	
+  "zh": {
+    "nav": {
+      "home": "首頁",
+      "portfolio": "作品集",
+      "commissions": "委託",
+      "characters": "原創角色",
+		"character-intro":"角色簡介",
+		"comic":"漫畫合集",
+      "contact": "聯絡方式"
+    },
+    "intro": {
+      "greeting": "你好！",
+      "selfintro": "我是 Citrusoda，歡迎來到我的作品網站。"
+    },
+    "footer": {
+      "copyright": "© 2025 Citrusoda。保留所有權利。"
+    }
+  }
+}
