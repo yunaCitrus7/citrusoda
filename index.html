@@ -12,8 +12,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
 	
 <!--Toggle switch-->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.css">
-<script src="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js"></script>
+
 	
 </head>
 
@@ -42,7 +43,7 @@
 
 <div class="lang-switch">
   <span class="lang-label">EN</span>
-  <input type="checkbox" id="langToggle">
+  <input type="checkbox" id="langToggle" class="js-switch">
   <span class="lang-label">中文</span>
 </div>
 	
@@ -91,44 +92,38 @@
     <footer>
       <p>&copy; 2025 Citrusoda. All rights reserved.</p>
     </footer>
-<script src="https://cdn.jsdelivr.net/npm/switchery@0.8.2/switchery.min.js"></script>
-<script>
+
+	<script>
   document.addEventListener('DOMContentLoaded', () => {
-    let langData = {};
-    const elem = document.querySelector('#langToggle');
+    const elem = document.querySelector('.js-switch');
+    if (typeof Switchery === 'undefined') {
+      console.error('Switchery not loaded');
+      return;
+    }
 
-    // Ensure Switchery is applied
-    const switchery = new Switchery(elem, {
-      color: '#ffffff',
-      secondaryColor: '#888',
-      size: 'small'
-    });
+    new Switchery(elem, { size: 'small', color: '#ffffff', secondaryColor: '#888' });
 
-    // Load lang JSON
     fetch('lang.json')
-      .then(response => response.json())
+      .then(res => res.json())
       .then(data => {
-        langData = data;
-        const savedLang = localStorage.getItem('lang') || 'en';
-        elem.checked = savedLang === 'zh';
-        applyLang(savedLang);
+        const saved = localStorage.getItem('lang') || 'en';
+        elem.checked = saved === 'zh';
+        applyLang(saved, data);
       });
 
-    // Apply translations
-    function applyLang(lang) {
+    elem.addEventListener('change', () => {
+      const selected = elem.checked ? 'zh' : 'en';
+      applyLang(selected);
+    });
+
+    function applyLang(lang, langData) {
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        const value = key.split('.').reduce((obj, i) => obj?.[i], langData[lang]);
+        const value = key.split('.').reduce((o, i) => o?.[i], langData[lang]);
         if (value) el.textContent = value;
       });
       localStorage.setItem('lang', lang);
     }
-
-    // Switch event
-    elem.addEventListener('change', () => {
-      const selectedLang = elem.checked ? 'zh' : 'en';
-      applyLang(selectedLang);
-    });
   });
 </script>
 
