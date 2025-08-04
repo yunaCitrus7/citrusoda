@@ -37,7 +37,7 @@ function setupLangSwitcher() {
   });
 
   function loadLangData(lang) {
-    fetch(`../locales/${lang}.json`)
+    fetch(`../personal-website/locales/${lang}.json`)
       .then(res => res.json())
       .then(data => {
         langData = data;
