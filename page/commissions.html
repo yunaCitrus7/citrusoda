@@ -46,13 +46,11 @@
 
 <h1 data-i18n="comm.title"></h1>
 
-<p style="background-color:rgb(228, 228, 228); padding:1em">
-❗️ Please make sure you have read the guildelines before contacting me for commission!
-</p>
+<p data-i18n="comm.warning"></p>
 <!--TABS-->
 <div class="tabs" >
   <div class="tab-buttons">
-     <button class="tab-btn active" data-tab="guide" data-i18n="comm.tab.details">Guidelines</button>
+     <button class="tab-btn active" data-tab="guide" data-i18n="comm.tab.guide">Guidelines</button>
     <button class="tab-btn" data-tab="char" data-i18n="comm.tab.character">Character Illustration</button>
     <button class="tab-btn" data-tab="splat" data-i18n="comm.tab.splatoon">Splatoon</button>
   </div>
@@ -60,18 +58,20 @@
 
 <!--Comms Guildelines-->
 
-<div class="tab-content active" id="guide" style="text-align: left; display:flex;">
+<div class="tab-content active" id="guide" style="text-align: left;">
 
 <div class="stickyMenu">
-<a href="#flow">Flow</a>
-<a href="#payment">Payment</a>
-<a href="#contact">Contact</a>
-<a href="#terms">Terms</a>
-<a href="#usage">Usage</a>
-<a href="delivery">Deadline and Delivery</a>
 
+  <div class="menu-buttons">
+    <button onclick="location.href='#flow'" data-i18n="comm.guide.flow"></button>
+    <button onclick="location.href='#payment'" data-i18n="comm.guide.payment"></button>
+    <button onclick="location.href='#contact'" data-i18n="comm.guide.contact"></button>
+    <button onclick="location.href='#terms'" data-i18n="comm.guide.terms"></button>
+    <button onclick="location.href='#usage'" data-i18n="comm.guide.usage"></button>
+    <button onclick="location.href='#delivery'" data-i18n="comm.guide.delivery"></button>
+  </div>
 </div>
-<div>
+<div style="flex:1;">
 <h2>Commission Guidelines</h3>
 
 <h3 id="flow">Flow </h3>
@@ -147,6 +147,7 @@
 
 
 </div>
+
 <div class="tab-content" id="char">
 
 <h3>Character Illustration</h3>

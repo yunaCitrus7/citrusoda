@@ -18,25 +18,41 @@
   "portfolio": {
     "title": "Illustrations"
   },
-
   "comm": {
-    "title":"Commissions",
-  "tab": {
-    "character": "Character Illustration",
-    "chibi": "Chibi",
-    "splatoon": "Splatoon"
-  },
-  "char": {
-    "title": "Character Illustration",
-    "desc": "Detailed full-body character commissions."
-  },
-  "chibi": {
-    "title": "Chibi",
-    "desc": "Cute small-style chibi commissions."
-  },
-  "splat": {
-    "title": "Splatoon",
-    "desc": "Fanart of Splatoon-styled commissions."
+    "title": "Commissions",
+    "tab": {
+      "guide":"Guidelines",
+      "character": "Character Illustration",
+      "chibi": "Chibi",
+      "splatoon": "Splatoon"
+    },
+    "guide": {
+      "title": "Commission Guidelines",
+      "flow": "Flow",
+      "payment": "Payment Method",
+      "contact": "Contact Platform",
+      "terms": "Term of Services",
+      "usage": "Usage & Pricing",
+      "delivery": "Deadline and Delivery"
+    },
+    "char": {
+      "title": "Character Illustration",
+      "desc": "Detailed full-body character commissions.",
+      "fullbody": "Full-Body",
+      "price": "60 USD"
+    },
+    "chibi": {
+      "title": "Chibi",
+      "desc": "Cute small-style chibi commissions."
+    },
+    "splat": {
+      "title": "Splatoon",
+      "desc": "Fanart of Splatoon-styled commissions."
+    },
+    "warning": "❗️ Please make sure you have read the guildelines before contacting me for commission!",
+    "contact": {
+      "or": "or",
+      "fees": "(Platform Fees Apply)"
+    }
   }
-}
 }

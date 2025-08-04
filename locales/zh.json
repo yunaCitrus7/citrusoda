@@ -17,26 +17,42 @@
   },
   "portfolio": {
     "title": "插畫作品"
+  },
+  "comm": {
+    "title": "插畫委託",
+    "tab": {
+      "guide":"委託須知",
+      "character": "角色插圖",
+      "chibi": "Chibi",
+      "splatoon": "斯普拉遁委託"
+    },
+    "char": {
+      "title": "Character Illustration",
+      "desc": "Detailed full-body character commissions.",
+      "fullbody": "全身",
+      "price": "60 美元"
+    },
+    "chibi": {
+      "title": "Chibi",
+      "desc": "Cute small-style chibi commissions."
+    },
+    "splat": {
+      "title": "Splatoon",
+      "desc": "Fanart of Splatoon-styled commissions."
+    },
+    "guide": {
+      "title": "委託須知",
+      "flow": "流程",
+      "payment": "付款方式",
+      "contact": "聯絡方式",
+      "terms": "服務條款",
+      "usage": "使用權與定價",
+      "delivery": "交期與交付"
+    },
+    "warning": "❗️ 在聯絡我進行委託前，請先詳細閱讀委託須知！",
+    "contact": {
+      "or": "或",
+      "fees": "（平台可能會收取手續費）"
+    }
   }
-  ,
-"comm": {
-  "title":"插畫委託",
-  "tab": {
-    "character": "Character Illustration",
-    "chibi": "Chibi",
-    "splatoon": "Splatoon"
-  },
-  "char": {
-    "title": "Character Illustration",
-    "desc": "Detailed full-body character commissions."
-  },
-  "chibi": {
-    "title": "Chibi",
-    "desc": "Cute small-style chibi commissions."
-  },
-  "splat": {
-    "title": "Splatoon",
-    "desc": "Fanart of Splatoon-styled commissions."
-  }
-}
 }

@@ -9,8 +9,8 @@ async function loadComponent(id, file) {
 
 // Load header and footer, then run i18n + toggle setup
 async function initializeSite() {
-  await loadComponent("header", "https://yunacitrus7.github.io/personal-website/header.html");
-  await loadComponent("footer", "https://yunacitrus7.github.io/personal-website/footer.html");
+  await loadComponent("header", "./page/header.html");
+  await loadComponent("footer", "./page/footer.html");
 
   setupLangSwitcher();
 }
@@ -37,7 +37,7 @@ function setupLangSwitcher() {
   });
 
   function loadLangData(lang) {
-    fetch(`../personal-website/locales/${lang}.json`)
+    fetch(`../locales/${lang}.json`)
       .then(res => res.json())
       .then(data => {
         langData = data;

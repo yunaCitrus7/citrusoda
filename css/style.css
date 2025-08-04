@@ -221,8 +221,39 @@ border-radius: 12px;
 }
 
 .stickyMenu{
-  background-color: white;;
-  border-radius:50px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position:sticky;
+  background-color: white;
+  border:1px;
+  margin:0px;
+  padding: 0px;
+  top: 1em; /* distance from the top */
+  align-self: flex-start; /* prevents stretch */
+  max-height: 90vh;
+  overflow-y: auto;
+  width:20%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
 
+}
+
+
+
+.menu-buttons button {
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: none;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-buttons button:hover {
+  background-color: #ccc;
+  color: #000;
 }
