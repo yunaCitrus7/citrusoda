@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "首頁",
+    "portfolio": "作品集",
+    "commissions": "委託",
+    "characters": "原創角色",
+    "character-intro": "角色簡介",
+    "comic": "漫畫合集",
+    "contact": "聯絡方式"
+  },
+  "intro": {
+    "greeting": "你好！",
+    "selfintro": "我是 Citrusoda，歡迎來到我的作品網站。"
+  },
+  "footer": {
+    "copyright": "© 2025 Citrusoda。保留所有權利。"
+  },
+  "portfolio": {
+    "title": "插畫作品"
+  }
+  ,
+"comm": {
+  "title":"插畫委託",
+  "tab": {
+    "character": "Character Illustration",
+    "chibi": "Chibi",
+    "splatoon": "Splatoon"
+  },
+  "char": {
+    "title": "Character Illustration",
+    "desc": "Detailed full-body character commissions."
+  },
+  "chibi": {
+    "title": "Chibi",
+    "desc": "Cute small-style chibi commissions."
+  },
+  "splat": {
+    "title": "Splatoon",
+    "desc": "Fanart of Splatoon-styled commissions."
+  }
+}
+}

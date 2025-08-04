@@ -1,0 +1,228 @@
+ * {
+	 box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      overflow-x:hidden;
+    }
+
+    p{
+      font-weight: 400;
+
+    }
+
+li{
+
+  font-weight: 300;
+  line-height: 1.5em;
+
+}
+
+
+  header {
+      position: sticky;
+      top: 0;
+      background:#ffce1b  ;
+      color: black;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+ }
+
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+   nav a {
+      color: Black;
+      text-decoration: none;
+      height: 100%;
+      display: flex;
+      align-items: right;
+      padding: 1.7em 1.1em;
+      transition: background-color 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: #005c92;
+    }
+
+/* --- Dropdown Styles --- */
+nav ul {
+  display: flex;
+  gap: 1em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1em;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li:hover > a {
+  background-color: #005c92;
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0081C9;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 999;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.75em 1em;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #005c92;
+}
+
+
+
+.content {
+	
+	padding: 1em;
+	
+}
+
+
+ footer {
+      text-align: center;
+      padding: 2em;
+      background: #f0f0f0;
+    }
+
+
+
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+ 
+}
+
+.card-overlay {
+  position: absolute;
+  top: 70px;     
+  left: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1em 1.5em;
+  max-width: 500px;
+  z-index: 1;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 2px solid white;
+  border-radius: 2em;
+  padding: 0.3em 0.8em;
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  margin-left: auto;
+  margin-right: 1em;
+}
+
+.lang-label {
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-size: 0.7em;
+}
+
+
+.card{
+background-color: white;
+border:none;
+border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 1em 1.5em;
+   transition: box-shadow 0.3s;
+
+}
+
+.card:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.icon-circle {
+  background: #333;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.icon-circle:hover {
+  background: #555;
+}
+
+.stickyMenu{
+  background-color: white;;
+  border-radius:50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+}

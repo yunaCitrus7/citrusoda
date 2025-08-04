@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "commissions": "Commissions",
+    "characters": "Original Characters",
+    "character-intro": "Character Introduction",
+    "comic": "Comics",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hello!",
+    "selfintro": "I'm Citrusoda, welcome to my portfolio site."
+  },
+  "footer": {
+    "copyright": "© 2025 Citrusoda. All rights reserved."
+  },
+  "portfolio": {
+    "title": "Illustrations"
+  },
+
+  "comm": {
+    "title":"Commissions",
+  "tab": {
+    "character": "Character Illustration",
+    "chibi": "Chibi",
+    "splatoon": "Splatoon"
+  },
+  "char": {
+    "title": "Character Illustration",
+    "desc": "Detailed full-body character commissions."
+  },
+  "chibi": {
+    "title": "Chibi",
+    "desc": "Cute small-style chibi commissions."
+  },
+  "splat": {
+    "title": "Splatoon",
+    "desc": "Fanart of Splatoon-styled commissions."
+  }
+}
+}

@@ -15,6 +15,13 @@
     },
     "footer": {
       "copyright": "© 2025 Citrusoda. All rights reserved."
+    },
+
+
+    "portfolio":{
+
+      "title": "Illustrations"
+
     }
   },
 	
@@ -36,6 +43,12 @@
     },
     "footer": {
       "copyright": "© 2025 Citrusoda。保留所有權利。"
+    },
+
+     "portfolio":{
+
+      "title": "插畫作品"
+
     }
   }
 }

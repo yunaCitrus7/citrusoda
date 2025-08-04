@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>index</title>
+<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/button.css">
+<!--Google Font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+	
+<!--Toggle switch-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js"></script>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css"
+/>
+</head>
+
+	
+	
+	
+<body>
+	
+<div id="header"></div>	
+
+<div id="content" style="padding:1em"> 
+  
+<h1 data-i18n="portfolio.title"></h1>
+
+<div class="lightgallery">
+  <a href="../media/placeholder.png">
+    <img src="../media/placeholder.png" />
+  </a>
+  <a href="../media/placeholder.png">
+    <img src="../media/placeholder.png" />
+  </a>
+  <a href="../media/placeholder.png">
+    <img src="../media/placeholder.png" />
+  </a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="footer"></div>
+<script src="../js/main.js"></script>	
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.min.js"></script>
+<script>
+
+	document.addEventListener("DOMContentLoaded", function () {
+  lightGallery(document.querySelector(".lightgallery"), {
+    plugins: [lgThumbnail, lgZoom],
+    speed: 500,
+    thumbnail: true,
+    animateThumb: true,
+    showThumbByDefault: true
+  });
+});
+</script>	
+</body>
+
+
+</html>
