@@ -38,7 +38,7 @@ function setupLangSwitcher(basePath = '/') {
   });
 
   function loadLangData(lang) {
-    fetch(basePath + `locales/${lang}.json`)
+    fetch(basePath + `https://yunacitrus7.github.io/personal-website/locales/${lang}.json`)
       .then(res => res.json())
       .then(data => {
         langData = data;
