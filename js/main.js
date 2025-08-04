@@ -9,14 +9,15 @@ async function loadComponent(id, file) {
 
 // Load header and footer, then run i18n + toggle setup
 async function initializeSite() {
-  await loadComponent("header", "'https://yunacitrus7.github.io/personal-website/page/header.html'");
-  await loadComponent("footer", "'https://yunacitrus7.github.io/personal-website/page/footer.html'");
+  const basePath = location.hostname === 'localhost' ? '/' : '/personal-website/';
+  await loadComponent("header", basePath + "page/header.html");
+  await loadComponent("footer", basePath + "page/footer.html");
 
-  setupLangSwitcher();
+  setupLangSwitcher(basePath);
 }
 
 // Language switching logic
-function setupLangSwitcher() {
+function setupLangSwitcher(basePath = '/') {
   const elem = document.querySelector('.js-switch');
   if (!elem || typeof Switchery === 'undefined') {
     console.warn('Switchery or toggle not loaded');
@@ -37,7 +38,7 @@ function setupLangSwitcher() {
   });
 
   function loadLangData(lang) {
-    fetch(`/locales/${lang}.json`)
+    fetch(basePath + `locales/${lang}.json`)
       .then(res => res.json())
       .then(data => {
         langData = data;
