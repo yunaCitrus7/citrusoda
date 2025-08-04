@@ -8,6 +8,20 @@
       overflow-x:hidden;
     }
 
+  .oc_page {
+      margin: 0;
+      padding: 0;
+      
+      width: 100%;
+      height: 100vh;
+    
+      background: #f5f5f5;
+      background-image: linear-gradient(rgba(202, 202, 202, 0.2) .1em, transparent .1em), linear-gradient(90deg, rgba(158, 158, 158, 0.2) .1em, transparent .1em);
+      background-size: 2em 2em;
+
+      
+    }
+
     p{
       font-weight: 400;
 
@@ -33,7 +47,24 @@ li{
       flex-wrap: wrap;
  }
 
+.oc-header header {
+  background-color: #fddde6;
+  color: #333; /* optional base text color */
+}
 
+/* Make navigation links white or dark depending on your taste */
+.oc-header header a {
+  color: #aa0055;
+}
+
+/* Optional: change logo color, social icons, etc. */
+.oc-header header .logo {
+  color: #aa0055;
+}
+
+.oc-header header a:hover {
+  color: #ff5599;
+}
 nav {
   flex: 1;
   display: flex;
@@ -136,11 +167,11 @@ nav ul li:hover > a {
 
 
 
-
 .image-wrapper {
   position: relative;
   width: 100%;
   height: 400px;
+  overflow: hidden;
 }
 
 .banner {
@@ -148,8 +179,32 @@ nav ul li:hover > a {
   height: 100%;
   object-fit: cover;
   display: block;
- 
 }
+
+/* Black overlay */
+.banner_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black */
+  z-index: 1;
+}
+
+/* Centered text on top */
+.banner_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+}
+
 
 .card-overlay {
   position: absolute;
@@ -230,7 +285,7 @@ border-radius: 12px;
   align-self: flex-start; /* prevents stretch */
   max-height: 90vh;
   overflow-y: auto;
-  width:20%;
+  width:10em;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
 
@@ -256,4 +311,69 @@ border-radius: 12px;
 .menu-buttons button:hover {
   background-color: #ccc;
   color: #000;
+}
+
+.char-card{
+background-color: rgb(240, 240, 240);
+padding: 2em;
+border-radius:15px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.char-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+
+}
+
+.char-section ul{
+  margin:0px;
+  padding:0px;
+}
+
+.char-section li{
+  list-style: none;
+
+}
+
+.char-section img {
+  width:400px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.char-section .icon{
+width:150px
+
+}
+
+.char-section button{
+  background-color: #ff5599;
+  border:none;
+  border-radius: 40px;
+  padding:1.5em;
+  color:rgb(255, 255, 255);
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+
+.char-section button:hover{
+  background-color: #b82e65;
+  border:none;
+  border-radius: 40px;
+  padding:1.5em;
+  color:rgb(255, 255, 255);
+  font-size: 15px;
+
+}
+
+.char-section p{
+font-weight: 300;
+
 }

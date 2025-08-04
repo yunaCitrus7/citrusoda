@@ -7,12 +7,16 @@ async function loadComponent(id, file) {
   document.getElementById(id).innerHTML = text;
 }
 
-// Load header and footer, then run i18n + toggle setup
 async function initializeSite() {
- 
-  await loadComponent("header", "https://yunacitrus7.github.io/personal-website/page/header.html");
-  await loadComponent("footer", "https://yunacitrus7.github.io/personal-website/page/footer.html");
+  await loadComponent("header", "../page/header.html");
 
+  // Add class for custom header styling (e.g. pink on oc_home.html)
+  if (window.location.pathname.includes('oc_home.html')) {
+    const headerWrapper = document.getElementById('header');
+    if (headerWrapper) headerWrapper.classList.add('oc-header');
+  }
+
+  await loadComponent("footer", "../page/footer.html");
   setupLangSwitcher();
 }
 
@@ -38,7 +42,7 @@ function setupLangSwitcher(basePath = '/') {
   });
 
   function loadLangData(lang) {
-    fetch(`https://yunacitrus7.github.io/personal-website/locales/${lang}.json`)
+    fetch( `/locales/${lang}.json`)
       .then(res => res.json())
       .then(data => {
         langData = data;
