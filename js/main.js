@@ -9,8 +9,8 @@ async function loadComponent(id, file) {
 
 // Load header and footer, then run i18n + toggle setup
 async function initializeSite() {
-  await loadComponent("header", "/page/header.html");
-  await loadComponent("footer", "/page/footer.html");
+  await loadComponent("header", "'https://yunacitrus7.github.io/personal-website/page/header.html'");
+  await loadComponent("footer", "'https://yunacitrus7.github.io/personal-website/page/footer.html'");
 
   setupLangSwitcher();
 }
